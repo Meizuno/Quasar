@@ -4,9 +4,9 @@
       <div class="q-pt-xl q-pb-xl relative-position title">
         <img :src="'src/images/' + title" alt="">
         <div class="absolute-right row content-center top-right-btns">
-          <q-icon name="fas fa-circle-question" size="25px" class="q-pa-sm q-mr-xl bg-secondary text-white"/>
-          <q-icon name="CZ" size="15px" class="bg-secondary"/>
-          <q-icon name="EN" size="15px" class="bg-secondary"/>
+          <q-btn push round dense color="secondary" text-color="white" size="18px" icon="fas fa-circle-question" class="q-mr-xl"/>
+          <q-btn push round dense color="secondary" text-color="white" size="18px" label="CZ"/>
+          <q-btn push round dense color="secondary" text-color="white" size="18px" label="EN"/>
         </div>
       </div>
       <div class="q-py-md">
@@ -94,7 +94,7 @@
           <template v-slot:control>
             <q-carousel-control class="q-gutter-md">
               <q-btn
-                push dense color="black" text-color="white" label="Navštívit blog" style="left: -200%" class="q-pa-sm"
+                push rounded dense color="black" text-color="white" label="Navštívit blog" style="left: -175%" class="q-pa-sm"
               />
               <q-btn
                 push round dense color="white" text-color="black" icon="fa fa-arrow-left"
@@ -113,11 +113,10 @@
       <q-banner class="bg-blue-grey-2 relative-position q-my-lg">
         <p class="section q-ma-none q-pa-md">Sledujte nás na sociálních sítích</p>
         <div class="row absolute-right q-my-auto content-center">
-            <q-icon clickable tag="a" target="_blank" href="" name="fa-brands fa-facebook" size="20px" class="q-pa-sm q-mx-sm text-black"/>
-            <q-icon clickable tag="a" target="_blank" href="" name="fa-brands fa-instagram" size="20px" class="q-pa-sm q-mx-sm text-black"/>
-            <q-icon clickable tag="a" target="_blank" href="" name="fa-brands fa-twitter" size="20px" class="q-pa-sm q-mx-sm text-black"/>
-            <q-icon clickable tag="a" target="_blank" href="" name="fa-brands fa-youtube" size="20px" class="q-pa-sm q-mx-sm text-black"/>
-
+          <q-btn round outline dense target="_blank" href="" icon="fa-brands fa-facebook"  size="12px" padding="12px" class="q-mx-sm"/>
+          <q-btn round outline dense target="_blank" href="" icon="fa-brands fa-instagram" size="12px" padding="12px" class="q-mx-sm"/>
+          <q-btn round outline dense target="_blank" href="" icon="fa-brands fa-twitter"   size="12px" padding="12px" class="q-mx-sm"/>
+          <q-btn round outline dense target="_blank" href="" icon="fa-brands fa-youtube"   size="12px" padding="12px" class="q-mx-sm"/>
         </div>
       </q-banner>
     </div>
@@ -169,30 +168,15 @@ export default defineComponent({
 
   .section{
     font-size: 1.5rem;
-    font-weight: 600;
+    font-weight: bold;
   }
 
   div.text p{
     max-width: 25%;
   }
 
-  .q-icon{
-    border-radius: 50%;
-  }
-
-  div.top-right-btns .q-icon:not(:first-child){
-    font-weight: 600;
-    color: white;
-    padding: 13px;
-  }
-
-  div.top-right-btns .q-icon:nth-child(2){
+  div.top-right-btns .q-btn:nth-child(2){
     margin-right: -5px;
-  }
-
-  .q-banner .q-icon{
-    border: 2px solid black;
-    text-decoration: none;
   }
 
   .slide-item div:first-child{
