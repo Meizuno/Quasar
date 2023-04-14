@@ -1,9 +1,9 @@
 <template>
   <q-page class="">
-    <div class="component1" :style="backgroundImage">
+    <div class="component1 q-mx-md" :style="backgroundImage">
       <div class="q-pt-xl q-pb-xl relative-position title">
         <img :src="'src/images/' + title" alt="">
-        <div class="absolute-right row content-center top-right-btns">
+        <div class="absolute-right row content-center top-right-btns q-mr-md">
           <q-btn push round dense color="secondary" text-color="white" size="18px" icon="fas fa-circle-question" class="q-mr-xl"/>
           <q-btn push round dense :color="$i18n.locale == 'cs'    ? 'black' : 'secondary'"    text-color="white" size="18px" label="CZ" @click="csLang()"/>
           <q-btn push round dense :color="$i18n.locale == 'en-US' ? 'black' : 'secondary'" text-color="white" size="18px" label="EN" @click="enLang()"/>
@@ -158,7 +158,7 @@ export default defineComponent({
     function enLang() {
       i18n.locale.value = 'en-US'
       router.push({ query: { lang: 'en' } })
-      console.log(`Change language on page to English`)
+      console.log('Change language on page to English')
     }
 
     function csLang(){
