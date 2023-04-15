@@ -11,4 +11,6 @@ export default {
   date_carousel_item2: '14. záři 2022',
 
   footer: 'Sledujte nás na sociálních sítích',
+
+  page404: 'Stránka neexistuje :('
 }

@@ -2,7 +2,7 @@
   <q-page class="">
     <div class="component1 q-mx-md" :style="backgroundImage">
       <div class="q-pt-xl q-pb-xl relative-position title">
-        <img :src="'src/images/' + title" alt="">
+        <img :src="title" alt="">
         <div class="absolute-right row content-center top-right-btns q-mr-md">
           <q-btn push round dense color="secondary" text-color="white" size="18px" icon="fas fa-circle-question" class="q-mr-xl"/>
           <q-btn push round dense :color="$i18n.locale == 'cs'    ? 'black' : 'secondary'"    text-color="white" size="18px" label="CZ" @click="csLang()"/>
@@ -10,7 +10,7 @@
         </div>
       </div>
       <div class="q-py-md">
-        <img :src="'src/images/' + message" alt="">
+        <img :src="message" alt="">
       </div>
       <div class="text">
         <p class="section">{{ $t('text1') }}</p>
@@ -141,7 +141,7 @@ export default defineComponent({
 
   data() {
     return {
-      backgroundImage: 'background-image: url("src/images/' + conf.backgroundImage + '")',
+      backgroundImage: 'background-image: url("' + conf.backgroundImage + '")',
       title: conf.titleImage,
       message: conf.messageImage,
     }

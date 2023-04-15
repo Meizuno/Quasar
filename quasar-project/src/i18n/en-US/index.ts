@@ -11,4 +11,6 @@ export default {
   date_carousel_item2: 'September 14, 2022',
 
   footer: 'Follow us on social networks',
+
+  page404: 'Page does not exists :(',
 }

@@ -3,5 +3,5 @@ import cs from './cs';
 
 export default {
   'en-US': enUS,
-  'cs': cs
+  'cs': cs,
 };
